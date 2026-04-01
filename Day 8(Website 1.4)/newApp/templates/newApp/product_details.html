@@ -1,0 +1,109 @@
+{% extends 'website/layout.html' %}
+
+{% block title %}{{ product.name }} - Product Details{% endblock %}
+
+{% block content %}
+<div class="product-details">
+    <!-- Header -->
+    <header class="product-header">
+        <h1>{{ product.name }}</h1>
+        <p>Product Details</p>
+    </header>
+
+    <!-- Product Overview -->
+    <section class="product-overview">
+        <div class="product-image">
+            {% if product.image %}
+                <img src="{{ product.image.url }}" alt="{{ product.name }}" width="400">
+            {% else %}
+                <div class="no-image">No Image Available</div>
+            {% endif %}
+        </div>
+        <div class="product-info">
+            <h2>₹{{ product.price }}</h2>
+            <p><strong>Status:</strong> {{ product.get_status_display }}</p>
+            <p>{{ product.description }}</p>
+            {% if product.status == 'available' %}
+                <button class="btn-add-cart">Add to Cart</button>
+                <button class="btn-buy-now">Buy Now</button>
+            {% else %}
+                <p class="unavailable">This product is currently {{ product.get_status_display|lower }}.</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- Additional Information -->
+    <section class="product-additional">
+        <h2>Product Information</h2>
+        <p><strong>Created:</strong> {{ product.created_at|date:"F j, Y" }}</p>
+        <!-- Add more fields if needed -->
+    </section>
+</div>
+
+<style>
+.product-details {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.product-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.product-overview {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.product-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-info h2 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.product-info p {
+    margin-bottom: 15px;
+}
+
+.btn-add-cart, .btn-buy-now {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-buy-now {
+    background-color: #e74c3c;
+}
+
+.unavailable {
+    color: #e74c3c;
+    font-weight: bold;
+}
+
+.product-additional {
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.no-image {
+    width: 400px;
+    height: 300px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+}
+</style>
+{% endblock %}
