@@ -1,0 +1,843 @@
+{% extends 'website/layout.html' %}
+
+{% block title %}FAQ - Frequently Asked Questions{% endblock %}
+
+{% block content %}
+<div class="faq-container">
+    <!-- FAQ Header -->
+    <div class="faq-header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Find answers to your questions about our products and services</p>
+        <div class="header-decoration">
+            <i class="fas fa-question-circle"></i>
+            <i class="fas fa-lightbulb"></i>
+            <i class="fas fa-headset"></i>
+        </div>
+    </div>
+
+    <!-- FAQ Search -->
+    <div class="faq-search-section">
+        <div class="search-wrapper">
+            <i class="fas fa-magnifying-glass"></i>
+            <input type="text" id="faqSearch" placeholder="Search FAQs...">
+        </div>
+        <p class="search-hint">Can't find what you're looking for? <a href="{% url 'newApp:contact' %}">Contact us</a></p>
+    </div>
+
+    <!-- FAQ Categories -->
+    <div class="faq-categories">
+        <h3>Browse by Category</h3>
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="all">All Questions</button>
+            <button class="category-btn" data-category="general">General</button>
+            <button class="category-btn" data-category="shipping">Shipping</button>
+            <button class="category-btn" data-category="payment">Payment</button>
+            <button class="category-btn" data-category="returns">Returns</button>
+            <button class="category-btn" data-category="account">Account</button>
+            <button class="category-btn" data-category="technical">Technical</button>
+        </div>
+    </div>
+
+    <!-- FAQ Items -->
+    <div class="faq-content">
+        <!-- General Section -->
+        <div class="faq-section" data-category="general">
+            <h2 class="section-title"><i class="fas fa-circle"></i> General Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">What products do you offer?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a wide range of high-quality tech products including electronics, mobile phones, audio equipment, cameras, and accessories. All our products are carefully selected and tested for quality assurance.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Do you offer international shipping?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we ship worldwide! We partner with reliable shipping providers to ensure your orders arrive safely. Shipping costs and delivery times vary based on your location. Check our shipping policy for more details.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Are your products authentic?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Absolutely! Every product we sell is 100% genuine and comes with manufacturer warranties where applicable. We work directly with authorized distributors to ensure authenticity.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Do you have physical stores?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Currently, we operate as an online retailer. However, we offer 24/7 customer support through our website. You can reach out to us anytime for assistance with your purchases.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Shipping Section -->
+        <div class="faq-section" data-category="shipping">
+            <h2 class="section-title"><i class="fas fa-circle"></i> Shipping & Delivery</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">How long does delivery take?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Delivery times vary by location. Domestic orders typically arrive within 5-7 business days, while international orders may take 10-21 business days. You'll receive a tracking number with your shipment confirmation.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">What are the shipping costs?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Shipping costs are calculated based on the weight of your order and your destination. We offer free shipping on orders over $50 for domestic deliveries. International shipping rates will be shown at checkout.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Can I track my order?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! You'll receive a tracking number via email once your order ships. You can use this number to track your package in real-time on the carrier's website.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Do you offer express shipping?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we offer express shipping options for an additional fee. Express orders are typically delivered within 2-3 business days. Choose your preferred shipping method at checkout.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="faq-section" data-category="payment">
+            <h2 class="section-title"><i class="fas fa-circle"></i> Payment & Billing</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">What payment methods do you accept?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We accept all major credit cards (Visa, Mastercard, American Express), debit cards, PayPal, and digital wallets. All transactions are secured with SSL encryption.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Is my payment information secure?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, we use industry-standard SSL encryption and comply with PCI DSS standards. Your payment information is never stored on our servers and is processed securely through our payment gateway.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Can I use multiple payment methods?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Currently, you can use one payment method per order. If you need to use multiple methods, you can place separate orders.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Do you offer payment plans?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We're currently exploring payment plan options for high-value purchases. Please contact our support team for more information about installment options.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Returns Section -->
+        <div class="faq-section" data-category="returns">
+            <h2 class="section-title"><i class="fas fa-circle"></i> Returns & Refunds</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">What is your return policy?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We offer a 30-day return policy on almost all products. Items must be unused and in original packaging. Return shipping is free for most items. Visit our returns page for detailed instructions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">How do I start a return?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Log into your account, go to your order history, and select "Return Item". Follow the instructions to print your return label. Once we receive and inspect your item, we'll process your refund.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">How long does a refund take?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Once we receive your returned item and verify its condition, refunds are processed within 5-7 business days. The refund will be credited to your original payment method.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Can I exchange an item instead of returning it?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes! You can exchange items for the same product or a different one of equal or greater value. If you need a refund on the difference, we'll process that separately. Contact our support team for exchange requests.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Account Section -->
+        <div class="faq-section" data-category="account">
+            <h2 class="section-title"><i class="fas fa-circle"></i> Account & Login</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">How do I create an account?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Click on the "Sign Up" button on our homepage. Enter your email address, create a secure password, and fill in your personal information. You'll receive a confirmation email to verify your account.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">I forgot my password. What should I do?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Click "Forgot Password" on the login page. Enter your email address and we'll send you a link to reset your password. Check your email (including spam folder) and follow the instructions.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Can I have multiple accounts?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can only have one account per email address. However, you can update your account information at any time. If you need a new account with a different email, you can create one.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">How do I delete my account?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>You can request account deletion by contacting our support team. We'll securely remove your personal data while maintaining order history for warranty purposes if applicable.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Technical Section -->
+        <div class="faq-section" data-category="technical">
+            <h2 class="section-title"><i class="fas fa-circle"></i> Technical Issues</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Why can't I checkout on mobile?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Our website is fully optimized for mobile devices. If you're experiencing issues, try clearing your browser cache, restarting your device, or trying a different browser. Contact support if the issue persists.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Is your site HTTPS secure?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes, our entire website uses HTTPS encryption. You'll see a padlock icon in your browser's address bar indicating a secure connection. All data transmission is encrypted.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">Which browsers are supported?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>We support all modern browsers including Chrome, Firefox, Safari, and Edge. For the best experience, please use the latest version of your browser.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="question-text">What should I do if I experience a technical error?</span>
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>First, try refreshing the page or clearing your browser cache. Disable browser extensions that might interfere. If the issue continues, take a screenshot and contact our technical support team with details.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Still Have Questions -->
+    <div class="faq-cta">
+        <h2>Still Have Questions?</h2>
+        <p>Our support team is here to help. Get in touch with us!</p>
+        <div class="cta-buttons">
+            <a href="{% url 'newApp:contact' %}" class="cta-btn primary">Contact Us</a>
+            <a href="{% url 'newApp:blog' %}" class="cta-btn secondary">Read Our Blog</a>
+        </div>
+    </div>
+</div>
+
+<style>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.faq-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* FAQ Header */
+.faq-header {
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ff7675;
+    position: relative;
+    overflow: hidden;
+}
+
+.faq-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.faq-header h1 {
+    color: #2c3e50;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.faq-header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+
+.header-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-decoration i {
+    font-size: 2.5rem;
+    color: #ff7675;
+    animation: bounce 2s infinite alternate;
+}
+
+.header-decoration i:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.header-decoration i:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-15px); }
+}
+
+/* FAQ Search */
+.faq-search-section {
+    margin-bottom: 45px;
+}
+
+.search-wrapper {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.search-wrapper i {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #667eea;
+    font-size: 1.2rem;
+}
+
+.search-wrapper input {
+    width: 100%;
+    padding: 16px 20px 16px 50px;
+    font-size: 1.1rem;
+    border: 2px solid #e3e7f0;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background: white;
+}
+
+.search-wrapper input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.15);
+}
+
+.search-hint {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    text-align: center;
+}
+
+.search-hint a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.search-hint a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+/* FAQ Categories */
+.faq-categories {
+    margin-bottom: 45px;
+    text-align: center;
+}
+
+.faq-categories h3 {
+    color: #2c3e50;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.category-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-btn {
+    padding: 10px 18px;
+    border: 2px solid #e3e7f0;
+    background: white;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+}
+
+.category-btn:hover {
+    border-color: #667eea;
+    color: #667eea;
+}
+
+.category-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+/* FAQ Content */
+.faq-content {
+    margin-bottom: 50px;
+}
+
+.faq-section {
+    margin-bottom: 40px;
+    animation: fadeInDown 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-title {
+    color: #2c3e50;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.section-title i {
+    color: #667eea;
+    font-size: 1rem;
+}
+
+/* FAQ Items */
+.faq-item {
+    background: white;
+    border: 2px solid #e3e7f0;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+}
+
+.faq-item:hover {
+    border-color: #667eea;
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.1);
+}
+
+.faq-question {
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+    transition: all 0.3s ease;
+}
+
+.faq-item.active .faq-question {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+}
+
+.question-text {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 1.05rem;
+    flex: 1;
+}
+
+.faq-question i {
+    color: #667eea;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    min-width: 25px;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    background: white;
+}
+
+.faq-item.active .faq-answer {
+    padding: 20px;
+    max-height: 500px;
+}
+
+.faq-answer p {
+    color: #7f8c8d;
+    line-height: 1.7;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* FAQ CTA Section */
+.faq-cta {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    padding: 50px 40px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.1);
+}
+
+.faq-cta h2 {
+    color: #2c3e50;
+    font-size: 2.2rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+}
+
+.faq-cta p {
+    color: #7f8c8d;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-btn {
+    padding: 14px 35px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+.cta-btn.primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+.cta-btn.primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+}
+
+.cta-btn.secondary {
+    background: white;
+    color: #667eea;
+    border: 2px solid #667eea;
+}
+
+.cta-btn.secondary:hover {
+    background: #667eea;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .faq-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .faq-header p {
+        font-size: 1rem;
+    }
+    
+    .section-title {
+        font-size: 1.3rem;
+    }
+    
+    .question-text {
+        font-size: 0.95rem;
+    }
+    
+    .category-buttons {
+        gap: 8px;
+    }
+    
+    .category-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+    }
+    
+    .cta-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .faq-container {
+        padding: 20px 15px;
+    }
+    
+    .faq-header {
+        padding: 25px 20px;
+    }
+    
+    .faq-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .header-decoration {
+        gap: 15px;
+    }
+    
+    .header-decoration i {
+        font-size: 2rem;
+    }
+    
+    .search-wrapper input {
+        padding: 12px 16px 12px 40px;
+        font-size: 1rem;
+    }
+    
+    .search-wrapper i {
+        left: 12px;
+    }
+    
+    .faq-categories h3 {
+        font-size: 1.2rem;
+    }
+    
+    .category-buttons {
+        flex-direction: column;
+    }
+    
+    .category-btn {
+        width: 100%;
+        padding: 12px 16px;
+    }
+    
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .faq-question {
+        padding: 16px;
+    }
+    
+    .question-text {
+        font-size: 0.9rem;
+    }
+    
+    .faq-item.active .faq-answer {
+        padding: 16px;
+    }
+    
+    .faq-answer p {
+        font-size: 0.85rem;
+    }
+    
+    .faq-cta {
+        padding: 30px 20px;
+    }
+    
+    .faq-cta h2 {
+        font-size: 1.6rem;
+    }
+    
+    .faq-cta p {
+        font-size: 1rem;
+    }
+}
+</style>
+
+<script>
+// FAQ Accordion functionality
+document.querySelectorAll('.faq-question').forEach(question => {
+    question.addEventListener('click', function() {
+        const faqItem = this.parentElement;
+        const isActive = faqItem.classList.contains('active');
+        
+        // Close all other items
+        document.querySelectorAll('.faq-item').forEach(item => {
+            item.classList.remove('active');
+        });
+        
+        // Toggle current item
+        if (!isActive) {
+            faqItem.classList.add('active');
+        }
+    });
+});
+
+// FAQ Search functionality
+document.getElementById('faqSearch').addEventListener('keyup', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    
+    document.querySelectorAll('.faq-item').forEach(item => {
+        const question = item.querySelector('.question-text').textContent.toLowerCase();
+        const answer = item.querySelector('.faq-answer p').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+            item.style.display = 'block';
+        } else {
+            item.style.display = 'none';
+        }
+    });
+});
+
+// Category filter functionality
+document.querySelectorAll('.category-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const category = this.getAttribute('data-category');
+        
+        // Update active button
+        document.querySelectorAll('.category-btn').forEach(b => {
+            b.classList.remove('active');
+        });
+        this.classList.add('active');
+        
+        // Filter sections
+        document.querySelectorAll('.faq-section').forEach(section => {
+            if (category === 'all' || section.getAttribute('data-category') === category) {
+                section.style.display = 'block';
+            } else {
+                section.style.display = 'none';
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

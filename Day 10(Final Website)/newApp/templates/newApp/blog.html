@@ -1,0 +1,1034 @@
+{% extends 'website/layout.html' %}
+
+{% block title %}Blog & News{% endblock %}
+
+{% block content %}
+<div class="blog-container">
+    <!-- Blog Header -->
+    <div class="blog-header">
+        <h1>Blog & News</h1>
+        <p>Stay updated with the latest news, tips, and insights from our team</p>
+        <div class="header-decoration">
+            <i class="fas fa-newspaper"></i>
+            <i class="fas fa-pen-fancy"></i>
+            <i class="fas fa-lightbulb"></i>
+        </div>
+    </div>
+
+    <!-- Featured Section -->
+    <div class="featured-section">
+        <h2>Featured Articles</h2>
+        <div class="featured-carousel">
+            <div class="featured-card">
+                <div class="featured-image">
+                    <i class="fas fa-laptop"></i>
+                </div>
+                <div class="featured-content">
+                    <span class="featured-badge">Featured</span>
+                    <h3>The Future of Technology in 2026</h3>
+                    <p class="featured-excerpt">Explore the latest technological innovations shaping our world and how they impact our daily lives.</p>
+                    <div class="featured-meta">
+                        <span><i class="fas fa-calendar"></i> April 5, 2026</span>
+                        <span><i class="fas fa-user"></i> Admin</span>
+                    </div>
+                    <a href="#" class="btn-read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Content Section -->
+    <div class="blog-content-wrapper">
+        <!-- Main Blog Area -->
+        <div class="blog-main">
+            <!-- Search & Filter Bar -->
+            <div class="blog-controls">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active">All</button>
+                    <button class="filter-btn">Technology</button>
+                    <button class="filter-btn">Business</button>
+                    <button class="filter-btn">Tips</button>
+                </div>
+            </div>
+
+            <!-- Blog Posts Grid -->
+            <div class="blog-grid">
+                <!-- Post 1 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <i class="fas fa-cogs"></i>
+                        <span class="post-category technology">Technology</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>How AI is Revolutionizing Product Development</h3>
+                        <p>Discover how artificial intelligence is transforming the way we develop and improve products for better user experiences.</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> April 3, 2026</span>
+                            <span><i class="fas fa-user"></i> Sarah Johnson</span>
+                        </div>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                            <a href="#" class="post-link"><i class="fas fa-arrow-right"></i> Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <i class="fas fa-chart-line"></i>
+                        <span class="post-category business">Business</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>E-Commerce Trends 2026: What's Next?</h3>
+                        <p>Learn about emerging trends in e-commerce that are shaping the retail industry and customer expectations.</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> April 1, 2026</span>
+                            <span><i class="fas fa-user"></i> Michael Chen</span>
+                        </div>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fas fa-clock"></i> 7 min read</span>
+                            <a href="#" class="post-link"><i class="fas fa-arrow-right"></i> Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="post-category tips">Tips</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>5 Security Tips for Online Shopping</h3>
+                        <p>Essential security practices every online shopper should know to keep their personal and financial information safe.</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> March 30, 2026</span>
+                            <span><i class="fas fa-user"></i> Emma Rodriguez</span>
+                        </div>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fas fa-clock"></i> 4 min read</span>
+                            <a href="#" class="post-link"><i class="fas fa-arrow-right"></i> Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <i class="fas fa-mobile-alt"></i>
+                        <span class="post-category technology">Technology</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>Latest Mobile Tech Innovations to Watch</h3>
+                        <p>Explore the cutting-edge mobile technologies that are redefining how we communicate and work on the go.</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> March 28, 2026</span>
+                            <span><i class="fas fa-user"></i> James Wilson</span>
+                        </div>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fas fa-clock"></i> 6 min read</span>
+                            <a href="#" class="post-link"><i class="fas fa-arrow-right"></i> Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <i class="fas fa-users"></i>
+                        <span class="post-category business">Business</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>Building Strong Customer Relationships</h3>
+                        <p>Strategies for creating meaningful connections with your customers and building long-term loyalty.</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> March 25, 2026</span>
+                            <span><i class="fas fa-user"></i> Lisa Anderson</span>
+                        </div>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fas fa-clock"></i> 8 min read</span>
+                            <a href="#" class="post-link"><i class="fas fa-arrow-right"></i> Read Article</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="blog-post-card">
+                    <div class="post-image">
+                        <i class="fas fa-brain"></i>
+                        <span class="post-category tips">Tips</span>
+                    </div>
+                    <div class="post-content">
+                        <h3>Productivity Tips for Remote Teams</h3>
+                        <p>Practical advice to help remote teams stay organized, motivated, and productive while working from anywhere.</p>
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> March 22, 2026</span>
+                            <span><i class="fas fa-user"></i> David Brown</span>
+                        </div>
+                        <div class="post-footer">
+                            <span class="read-time"><i class="fas fa-clock"></i> 5 min read</span>
+                            <a href="#" class="post-link"><i class="fas fa-arrow-right"></i> Read Article</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn prev"><i class="fas fa-chevron-left"></i> Previous</button>
+                <div class="page-numbers">
+                    <button class="page-num active">1</button>
+                    <button class="page-num">2</button>
+                    <button class="page-num">3</button>
+                </div>
+                <button class="page-btn next">Next <i class="fas fa-chevron-right"></i></button>
+            </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+            <!-- Categories Widget -->
+            <div class="sidebar-widget">
+                <h4>Categories</h4>
+                <div class="category-list">
+                    <div class="category-item">
+                        <i class="fas fa-folder"></i>
+                        <span>Technology</span>
+                        <span class="count">24</span>
+                    </div>
+                    <div class="category-item">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Business</span>
+                        <span class="count">18</span>
+                    </div>
+                    <div class="category-item">
+                        <i class="fas fa-lightbulb"></i>
+                        <span>Tips & Tricks</span>
+                        <span class="count">32</span>
+                    </div>
+                    <div class="category-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Industry News</span>
+                        <span class="count">15</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Recent Posts Widget -->
+            <div class="sidebar-widget">
+                <h4>Recent Posts</h4>
+                <div class="recent-posts-list">
+                    <div class="recent-post">
+                        <h5>The Future of Technology in 2026</h5>
+                        <span class="post-date"><i class="fas fa-calendar"></i> April 5, 2026</span>
+                    </div>
+                    <div class="recent-post">
+                        <h5>How AI is Revolutionizing Product Development</h5>
+                        <span class="post-date"><i class="fas fa-calendar"></i> April 3, 2026</span>
+                    </div>
+                    <div class="recent-post">
+                        <h5>E-Commerce Trends 2026: What's Next?</h5>
+                        <span class="post-date"><i class="fas fa-calendar"></i> April 1, 2026</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Subscribe Widget -->
+            <div class="sidebar-widget subscribe-widget">
+                <h4>Subscribe to Updates</h4>
+                <p>Get the latest news and insights delivered to your inbox</p>
+                <form class="subscribe-form">
+                    <input type="email" placeholder="Enter your email">
+                    <button type="submit"><i class="fas fa-paper-plane"></i> Subscribe</button>
+                </form>
+            </div>
+
+            <!-- Popular Tags -->
+            <div class="sidebar-widget">
+                <h4>Popular Tags</h4>
+                <div class="tags-cloud">
+                    <span class="tag">Innovation</span>
+                    <span class="tag">Products</span>
+                    <span class="tag">Trends</span>
+                    <span class="tag">Technology</span>
+                    <span class="tag">Business</span>
+                    <span class="tag">Tips</span>
+                    <span class="tag">Security</span>
+                    <span class="tag">2026</span>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
+
+<style>
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+.blog-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Blog Header */
+.blog-header {
+    text-align: center;
+    margin-bottom: 50px;
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 2px solid #ff7675;
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+.blog-header h1 {
+    color: #2c3e50;
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-weight: 800;
+    position: relative;
+    z-index: 1;
+}
+
+.blog-header p {
+    color: #7f8c8d;
+    font-size: 1.2rem;
+    position: relative;
+    z-index: 1;
+    margin-bottom: 25px;
+}
+
+.header-decoration {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    position: relative;
+    z-index: 1;
+}
+
+.header-decoration i {
+    font-size: 2.5rem;
+    color: #ff7675;
+    animation: float 3s ease-in-out infinite;
+}
+
+.header-decoration i:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.header-decoration i:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+/* Featured Section */
+.featured-section {
+    margin-bottom: 50px;
+}
+
+.featured-section h2 {
+    text-align: center;
+    color: #2c3e50;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+}
+
+.featured-carousel {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.featured-card {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 0;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+    border: 2px solid #e3e7f0;
+}
+
+.featured-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.2);
+    border-color: #667eea;
+}
+
+.featured-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    position: relative;
+}
+
+.featured-image i {
+    font-size: 5rem;
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.featured-content {
+    padding: 35px;
+    position: relative;
+}
+
+.featured-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.featured-content h3 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.featured-excerpt {
+    color: #7f8c8d;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.featured-meta {
+    display: flex;
+    gap: 20px;
+    color: #95a5a6;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.featured-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.btn-read-more {
+    display: inline-block;
+    padding: 12px 28px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-read-more:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.3);
+}
+
+/* Blog Content Wrapper */
+.blog-content-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 40px;
+}
+
+/* Blog Controls */
+.blog-controls {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e3e7f0 100%);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-box {
+    flex: 1;
+    min-width: 250px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    background: white;
+    padding: 12px 18px;
+    border-radius: 10px;
+    border: 2px solid #e3e7f0;
+    transition: all 0.3s ease;
+}
+
+.search-box:focus-within {
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.search-box i {
+    color: #667eea;
+    margin-right: 10px;
+}
+
+.search-box input {
+    border: none;
+    background: none;
+    outline: none;
+    flex: 1;
+    font-size: 1rem;
+    color: #2c3e50;
+}
+
+.search-box input::placeholder {
+    color: #bdc3c7;
+}
+
+.filter-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 18px;
+    background: white;
+    border: 2px solid #e3e7f0;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+}
+
+/* Blog Grid */
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.blog-post-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s cubic-bezier(0.23, 1, 0.320, 1);
+    border: 2px solid #e3e7f0;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-post-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(102, 126, 234, 0.15);
+    border-color: #667eea;
+}
+
+.post-image {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.post-image i {
+    font-size: 3.5rem;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.post-category {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.post-category.technology {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.post-category.business {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.post-category.tips {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.post-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-content h3 {
+    color: #2c3e50;
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.post-content p {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    flex: 1;
+}
+
+.post-meta {
+    display: flex;
+    gap: 15px;
+    color: #95a5a6;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+    padding-bottom: 15px;
+}
+
+.post-meta span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.read-time {
+    color: #7f8c8d;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.post-link {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.post-link:hover {
+    color: #764ba2;
+    gap: 12px;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.page-btn {
+    padding: 10px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.page-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+}
+
+.page-numbers {
+    display: flex;
+    gap: 8px;
+}
+
+.page-num {
+    width: 35px;
+    height: 35px;
+    border: 2px solid #e3e7f0;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #7f8c8d;
+    transition: all 0.3s ease;
+}
+
+.page-num:hover,
+.page-num.active {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-color: #667eea;
+    color: white;
+}
+
+/* Sidebar */
+.blog-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.sidebar-widget {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e3e7f0 100%);
+    padding: 25px;
+    border-radius: 15px;
+    border: 1px solid #e3e7f0;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
+}
+
+.sidebar-widget h4 {
+    color: #2c3e50;
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.category-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.category-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.category-item:hover {
+    background: #667eea;
+    color: white;
+    transform: translateX(5px);
+}
+
+.category-item i {
+    color: #667eea;
+    font-size: 1.1rem;
+}
+
+.category-item:hover i {
+    color: white;
+}
+
+.category-item span:nth-child(2) {
+    flex: 1;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.category-item:hover span:nth-child(2) {
+    color: white;
+}
+
+.count {
+    background: rgba(102, 126, 234, 0.1);
+    color: #667eea;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.category-item:hover .count {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+/* Recent Posts */
+.recent-posts-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.recent-post {
+    padding: 12px;
+    background: white;
+    border-radius: 8px;
+    border-left: 3px solid #667eea;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.recent-post:hover {
+    background: white;
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.recent-post h5 {
+    color: #2c3e50;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.post-date {
+    color: #95a5a6;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Subscribe Widget */
+.subscribe-widget {
+    background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+    border: 2px solid #667eea;
+}
+
+.subscribe-widget p {
+    color: #7f8c8d;
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.subscribe-form input {
+    padding: 12px 16px;
+    border: 2px solid #e3e7f0;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.subscribe-form input:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.1);
+}
+
+.subscribe-form button {
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.subscribe-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* Tags Cloud */
+.tags-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 14px;
+    background: white;
+    border: 2px solid #e3e7f0;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #7f8c8d;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tag:hover {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-color: #667eea;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .featured-card {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-content-wrapper {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-sidebar {
+        order: 2;
+    }
+}
+
+@media (max-width: 768px) {
+    .blog-header h1 {
+        font-size: 2.2rem;
+    }
+    
+    .blog-controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    .search-box {
+        min-width: auto;
+    }
+    
+    .filter-buttons {
+        justify-content: flex-start;
+    }
+    
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .blog-sidebar {
+        gap: 20px;
+    }
+    
+    .sidebar-widget {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .blog-container {
+        padding: 20px 15px;
+    }
+    
+    .blog-header {
+        padding: 25px 20px;
+    }
+    
+    .blog-header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .blog-header p {
+        font-size: 1rem;
+    }
+    
+    .header-decoration {
+        gap: 15px;
+    }
+    
+    .header-decoration i {
+        font-size: 2rem;
+    }
+    
+    .featured-content {
+        padding: 20px;
+    }
+    
+    .featured-content h3 {
+        font-size: 1.4rem;
+    }
+    
+    .blog-post-card {
+        border-radius: 12px;
+    }
+    
+    .post-content {
+        padding: 18px;
+    }
+    
+    .post-image {
+        height: 150px;
+    }
+    
+    .post-image i {
+        font-size: 2.5rem;
+    }
+    
+    .post-content h3 {
+        font-size: 1rem;
+    }
+    
+    .post-content p {
+        font-size: 0.85rem;
+    }
+    
+    .pagination {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    
+    .page-btn {
+        padding: 8px 15px;
+        font-size: 0.85rem;
+    }
+}
+</style>
+{% endblock %}
